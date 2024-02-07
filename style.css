@@ -1,0 +1,101 @@
+body {
+  background-color: #f4f4f4; /* Light gray background */
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Cartoonish font */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Arrange containers top to bottom */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1,
+h2 {
+  color: #ff6f61; /* Reddish color for headings */
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for a shiny effect */
+  animation: slideInFromTop 1s ease forwards; /* Animation for title */
+  opacity: 0; /* Initially hidden */
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+fieldset {
+  border: 2px solid #5e8c31; /* Green border for fieldsets */
+  border-radius: 10px; /* Rounded border */
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+legend {
+  font-weight: bold;
+  color: #5e8c31; /* Darker green color for legend */
+}
+
+input[type="button"] {
+  background-color: #ffd166; /* Yellow background for buttons */
+  color: #222; /* Dark text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px; /* Rounded corners for buttons */
+  cursor: pointer;
+  margin-right: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Button shadow for depth */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+input[type="button"]:hover {
+  background-color: #ffa41b; /* Lighter yellow on hover */
+}
+
+input[type="number"] {
+  padding: 8px;
+  border: 2px solid #ff6f61; /* Reddish border for number inputs */
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.content {
+  width: 80%;
+  max-width: 800px;
+  animation: slideInFromLeft 1s ease; /* Animation to slide content from left */
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+tableau-viz {
+  border-radius: 10px; /* Rounded corners for the visualization */
+  overflow: hidden; /* Hide overflowing parts of the visualization */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  animation: pulse 2s infinite alternate; /* Animation for a pulse effect */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
