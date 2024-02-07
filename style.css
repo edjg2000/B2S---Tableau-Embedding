@@ -2,7 +2,7 @@ body {
   background-color: #f4f4f4; /* Light gray background */
   font-family: "Comic Sans MS", cursive, sans-serif; /* Cartoonish font */
   margin: 0;
-  padding: 0;
+  padding: 100px 20px 20px; /* Add padding to create space around the titles */
   display: flex;
   flex-direction: column; /* Arrange containers top to bottom */
   align-items: center;
@@ -15,18 +15,16 @@ h2 {
   color: #ff6f61; /* Reddish color for headings */
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for a shiny effect */
-  animation: slideInFromTop 1s ease forwards; /* Animation for title */
-  opacity: 0; /* Initially hidden */
+  animation: spin 2s linear infinite; /* Animation for spinning */
+  margin-bottom: 20px; /* Add margin to separate titles from other elements */
 }
 
-@keyframes slideInFromTop {
-  0% {
-    transform: translateY(-100px);
-    opacity: 0;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+  to {
+    transform: rotate(360deg);
   }
 }
 
